@@ -1,0 +1,15 @@
+curl -i https://www.torrentbd.com/ajtakelogin.php -d username=<user> -d password=<pass> -d auth_login= -d recaptcha_token= -d otp= -d login_phase=1 -d _remember=yes -d extra=
+HTTP/2 200
+server: nginx
+date: Thu, 04 Nov 2021 16:20:43 GMT
+content-type: text/html; charset=UTF-8
+set-cookie: ts_argon=716ab68ba8c36fa632c2c27b2a341bf6d19b15d7a1e787c8d3ec657004ae5aee78a044d97e0fc9d2929ca0b125afd9b468fde7b70f03879c3b80f732ab3a0bda5adea8378ff3242435eb34c223b22c2d7566d274d466d42b7cd236e09336a1467990b2fe477502ae01c2ff8af04e43feb5764577a0bc; path=/; secure; HttpOnly
+set-cookie: user=6aff8c4e638567d8e21b; expires=Sat, 04-Dec-2021 16:20:43 GMT; Max-Age=2592000; path=/; secure; HttpOnly
+set-cookie: x_auth=08c395d8a245c6ed9c72d6813b5d0a0111d0aa5bf5663b357eaa36877da154a51e46ee2c2e3a6e3382347c5a27eb41be8ea751c583e36f2183834cc348f7929decf4f04c01a42ca183d017bccfd369fb0167a820cc9cbd28eeb2c0a20aa653871aa5d69416121f798766a27e83d42fd9ef78d76a6a77a216c7c23300e0b3e6d31fe515745418cf6028c3a69fc0d9f587d242056f984b45210171dc602884f60d; expires=Sat, 04-Dec-2021 16:20:43 GMT; Max-Age=2592000; path=/; secure; HttpOnly
+set-cookie: ufp=9738cd0f2b019db03784a5d2f12c92ccabbe857df9e647282dc36fba08f05ec62b16f44234a6f340; expires=Sun, 03-Nov-2024 16:20:43 GMT; Max-Age=94608000; path=/; secure; HttpOnly
+x-frame-options: sameorigin
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
+strict-transport-security: max-age=63072000; includeSubdomains; preload
+
+{"success":true,"mfa":false,"message":"Login successful"}

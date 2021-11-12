@@ -1,0 +1,74 @@
+#+AUTHOR: Asif Mahmud Shimon
+#+STARTUP: indent showall
+
+* qBittorrent search plugin for TorrentBD
+This is a search engine plugin of [[https://www.qbittorrent.org/][qBittorrent]], to ease
+searching for torrents in [[https://torrentbd.com/][TorrentBD]] site.
+
+** Installation
+*** Requirements
+1. [[https://www.qbittorrent.org/][qBittorrent]]
+2. [[https://www.python.org/][Python]] :: version 3.4 or higher is recommended
+3. [[https://www.torrentbd.com/][TorrentBD]] account
+
+*** Setup
+Follow these steps after you've installed both *qBittorrent* and
+*Python* -
+
+**** Create a configuration file
+You need to create a configuration file named *torrentbdrc.json* or
+*.torrentbdrc.json* in your home directory. For windows it is under
+~C:/Users/Your User Name~ , for linux it ~/home/yourusername~. For mac
+it should be like linux (i don't have a mac, so feel free to let me
+know). Either of the file names will work (this is done for linux
+users). Content of the file is as follows -
+
+#+BEGIN_SRC js
+  {
+    "username": "torrentbd username",
+    "password": "torrentbd password",
+    "freeleech": false,
+    "internal": false,
+    "active_only": true,
+    "enable_logging": false
+  }
+#+END_SRC
+
+Remember the file is case sensitive, meaning small *t* is not the same as
+capital *T*. The names are pretty much self-explanatory, if you are not
+clear about anything as in the git issue.
+
+**** Download the plugin
+Now you need to download the plugin. You only need to download the
+[[file:torrentbd.py][torrentbd.py]] file. You can also find zipped release with all the
+files used for development. But you will only need the file named
+*torrentbd.py*.
+
+**** Install plugin
+Now open up qbittorrent, go to search tab, then *Search plugins...* (at
+the right bottom), then *Install a new one*, then *Local file*, browse
+the downloaded/extracted *torrentbd.py* file and click open to install
+the plugin. If you are having trouble following steps check out
+[[https://github.com/qbittorrent/search-plugins/wiki/Install-search-plugins#steps-to-install-search-plugins-qbittorrent-version-3110-or-more-recent][this link]].
+   
+** Settings
+Apart from the *username* and *password* settings keys, all other keys are optional,
+so you can simply omit them. Following optional keys are supported for now -
+
+- freeleech :: whether or not to search for freeleech torrents only.
+  values are *true* or *false*, default *false*.
+- internal :: whether or not to search for internal torrents.
+  values are *true* or *false*, default *false*.
+- active_only :: whether or not to search for active only torrents.
+  values are *true* or *false*, default *false*.
+- enable_logging :: whether or not to log plugin activities in a file
+  named ~.torrentbd.log~ under the home directory.
+  values are *true* or *false*, default *false*.
+
+** Contribution
+If you find any bug or issue or want to add extra features, feel free
+to fork this repository and create a *PR* or just open an issue at github.
+I'll try to respond whenever i get time. If you want checkout code or
+try something for yourself or to create a *PR* please use [[https://pypi.org/project/black/][python black]]
+for automatic code formatting and [[https://pypi.org/project/pipenv/][pipenv]] to manage virtual environment
+and extra packages.
